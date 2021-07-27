@@ -1,0 +1,34 @@
+{
+  "social": [
+    {
+      "id": "s1",
+      "alt": "git",
+      "image": "./assets/icons/git.png"
+    },
+    {
+      "id": "s2",
+      "alt": "twitter",
+      "image": "./assets/icons/twi.png"
+    },
+    {
+      "id": "s3",
+      "alt": "facebook",
+      "image": "./assets/icons/fb.png"
+    },
+    {
+      "id": "s4",
+      "alt": "google plus",
+      "image": "./assets/icons/2168290.png"
+    },
+    {
+      "id": "s5",
+      "alt": "mail",
+      "image": "./assets/icons/mail.png"
+    },
+    {
+      "id": "s6",
+      "alt": "user",
+      "image": "./assets/icons/u.png"
+    }
+  ]
+}
