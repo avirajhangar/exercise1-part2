@@ -1,4 +1,6 @@
-.articles {
+import styled from "styled-components";
+
+export const ArticlesContainer = styled.div`
   padding: 0 15px;
   display: flex;
   flex-direction: column;
@@ -18,4 +20,4 @@
     justify-content: space-evenly;
     padding: 0 30px;
   }
-}
+`;

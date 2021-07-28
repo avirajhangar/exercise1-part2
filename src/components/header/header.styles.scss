@@ -6,16 +6,6 @@
   height: 50px;
   padding: 0 15px;
 
-  @media (min-width: 1200px) {
-    .header {
-      position: fixed;
-      z-index: 10;
-      display: flex;
-      justify-content: space-between;
-      width: 100%;
-    }
-  }
-
   .header-link {
     color: gray;
     font-size: 19px;

@@ -2,7 +2,8 @@ import React, { useState, useEffect } from "react";
 
 import data from "../../assets/data/articles.json";
 import Article from "../article/article.component";
-import "./articles-list.styles.scss";
+import { ArticlesContainer } from "./articles-list.styles";
+
 const ArticlesList = () => {
   const [articles, setArticles] = useState([]);
   useEffect(() => {
@@ -13,11 +14,11 @@ const ArticlesList = () => {
 
   if (articles.length > 0) {
     return (
-      <div className="articles">
+      <ArticlesContainer>
         {articles.map((article) => {
           return <Article key={article.id} {...article} />;
         })}
-      </div>
+      </ArticlesContainer>
     );
   }
   return <div>Articles loading...</div>;

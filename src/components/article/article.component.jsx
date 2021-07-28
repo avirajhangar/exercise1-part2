@@ -1,18 +1,24 @@
 import React from "react";
-import "./article.styles.scss";
+
+import {
+  ArticleContainer,
+  ArticleDate,
+  ArticleImage,
+  ArticleTitle,
+} from "./article.styles";
 
 const Article = ({ title, date, description, image }) => {
   return (
-    <div className="article">
-      <p className="article__date">{date}</p>
-      <img
+    <ArticleContainer>
+      <ArticleDate>{date}</ArticleDate>
+      <ArticleImage
         className="article__img"
         src={`./assets/images/${image}`}
         alt="article 1"
       />
-      <h3 className="article__title">{title}</h3>
+      <ArticleTitle className="article__title">{title}</ArticleTitle>
       <p className="article__description">{description}</p>
-    </div>
+    </ArticleContainer>
   );
 };
 

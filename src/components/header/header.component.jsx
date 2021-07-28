@@ -1,6 +1,20 @@
 import React, { useState } from "react";
 import "./header.styles.scss";
 import { Link } from "react-router-dom";
+import {
+  HeaderContainer,
+  HeaderLogo,
+  DesktopNav,
+  MobileNav,
+  MenuButton,
+  Hamburger,
+  Line,
+  MenuItems,
+  MenuItemList,
+  DesktopNavWrap,
+  DesktopMenuUl,
+  DesktopLink,
+} from "./header.styles";
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -8,54 +22,52 @@ const Header = () => {
     setMenuOpen(!menuOpen);
   };
   return (
-    <header className="header">
-      <a className="header-link" href="/">
-        CodePlayground
-      </a>
-      <nav className={`mobile-nav nav${menuOpen ? " open-menu" : ""}`}>
-        <button className="nav-btn" onClick={toggleMenu}>
-          <div className="nav-btn-hamburger">
-            <div className="line one"></div>
-            <div className="line two"></div>
-            <div className="line three"></div>
-          </div>
-        </button>
-        <div className="mobile-nav-menu-wrap">
+    <HeaderContainer>
+      <HeaderLogo>CodePlayground</HeaderLogo>
+      <MobileNav>
+        <MenuButton onClick={toggleMenu}>
+          <Hamburger>
+            <Line open={menuOpen} one />
+            <Line open={menuOpen} two />
+            <Line open={menuOpen} three />
+          </Hamburger>
+        </MenuButton>
+        <MenuItems open={menuOpen}>
           <ul>
-            <li>
+            <MenuItemList>
               <Link to="/">Home</Link>
-            </li>
-            <li>
+            </MenuItemList>
+            <MenuItemList>
               <Link to="/">About us</Link>
-            </li>
-            <li>
+            </MenuItemList>
+            <MenuItemList>
               <Link to="/">sample page</Link>
-            </li>
-            <li>
+            </MenuItemList>
+            <MenuItemList>
               <Link to="/">contact</Link>
-            </li>
+            </MenuItemList>
           </ul>
-        </div>
-      </nav>
-      <nav className="desktop-nav nav">
-        <div className="desktop-nav-menu-wrap">
-          <ul>
+        </MenuItems>
+      </MobileNav>
+      <DesktopNav>
+        <DesktopNavWrap>
+          <DesktopMenuUl>
             <li>
-              <Link to="/">Home</Link>
+              <DesktopLink to="/">Home</DesktopLink>
             </li>
             <li>
-              <Link to="/">About us</Link>
+              <DesktopLink to="/">About us</DesktopLink>
             </li>
             <li>
-              <Link to="/">sample page</Link>
+              <DesktopLink to="/">sample page</DesktopLink>
             </li>
             <li>
-              <Link to="/">contact</Link>
+              <DesktopLink to="/">contact</DesktopLink>
             </li>
-          </ul>
-        </div>
-      </nav>
-    </header>
+          </DesktopMenuUl>
+        </DesktopNavWrap>
+      </DesktopNav>
+    </HeaderContainer>
   );
 };
 
