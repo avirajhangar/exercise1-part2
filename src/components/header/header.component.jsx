@@ -21,9 +21,10 @@ const Header = () => {
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
   };
+
   return (
     <HeaderContainer>
-      <HeaderLogo>CodePlayground</HeaderLogo>
+      <HeaderLogo to="/">CodePlayground</HeaderLogo>
       <MobileNav>
         <MenuButton onClick={toggleMenu}>
           <Hamburger>
