@@ -5,11 +5,7 @@ import { Link } from "react-router-dom";
 const Banner = () => {
   return (
     <BannerContainer>
-      <BannerImage
-        className="banner__img"
-        src="./assets/images/caralog10.jpg"
-        alt="Hp Banner"
-      />
+      <BannerImage src="./assets/images/caralog10.jpg" alt="Hp Banner" />
       <BannerBackground />
       <BannerBlock>
         <BannerBlockSubtitle>Small Bussiness</BannerBlockSubtitle>
